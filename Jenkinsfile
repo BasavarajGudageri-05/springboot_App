@@ -38,7 +38,7 @@ pipeline{
 
         stage('Docker image Build'){
             steps{
-                sh 'docker build -t akashjyothi/twitter-app:${GIT_COMMIT} .'
+                sh 'docker build -t babugudageri/twitter-app:${GIT_COMMIT} .'
             }
         }
 
@@ -50,7 +50,7 @@ pipeline{
                     passwordVariable: 'DOCKER_PASSWORD'
                 )]) {
                     sh 'echo $DOCKER_PASSWORD | docker login -u $DOCKER_USERNAME --password-stdin'
-                    sh 'docker push akashjyothi/twitter-app:${GIT_COMMIT}'
+                    sh 'docker push babugudageri/twitter-app:${GIT_COMMIT}'
                 }
             }
         }
@@ -86,7 +86,7 @@ Build URL  : ${BUILD_URL}
 Regards,
 Jenkins
 """,
-                to: "jyothij1056@gmail.com"
+                to: "basavarajgudageri07@gmail.com"
             )
         }
 
@@ -108,7 +108,7 @@ Please check logs for details.
 Regards,
 Jenkins
 """,
-                to: "jyothij1056@gmail.com"
+                to: "basavarajgudageri07@gmail.com"
             )
         }
     }
