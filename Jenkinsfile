@@ -28,10 +28,10 @@ pipeline{
         stage('code quality check'){
             steps{
                 sh '''
-                mvn sonar:sonar \
-                -Dsonar.projectKey=java-proj \
-                -Dsonar.host.url=http://107.23.182.47:9000 \
-                -Dsonar.login=516ee64be0b8e09052afa0222c3b6121c5c38fdb
+              mvn sonar:sonar \
+             -Dsonar.projectKey=Java \
+             -Dsonar.host.url=http://54.234.155.171:9000 \
+             -Dsonar.login=96776e3154522156b6677b45d29b76caf63f347b
                 '''
             }
         }
